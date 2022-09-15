@@ -103,16 +103,16 @@ echo -e "\e[36m╘════════════════════�
  [\033[1;36m09\033[0m]  Addd Trojan Account
  [\033[1;36m10\033[0m]  Add Sodosok Account
  [\033[1;36m11\033[0m]  Cek User Xray
- [\033[1;36m12\033[0m]  Del User Xray
- [\033[1;36m13\033[0m]  Renew User Xray"
+ [\033[1;36m12\033[0m]  Del User Xray Vmess
+ [\033[1;36m13\033[0m]  Del User Xray Ssws
+ [\033[1;36m14\033[0m]  Renew User Xray"
 echo -e  "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;41;36m               Settings MENU                \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m
- [\033[1;36m14\033[0m]  Add-host
- [\033[1;36m15\033[0m]  Gen SSL 
- [\033[1;36m16\033[0m]  Backup 
- [\033[1;36m17\033[0m]  Restore
- [\033[1;36m18\033[0m]  Xol Panel Bot
+ [\033[1;36m15\033[0m]  Add-host
+ [\033[1;36m16\033[0m]  Gen SSL 
+ [\033[1;36m17\033[0m]  Backup 
+ [\033[1;36m18\033[0m]  Restore
 "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
@@ -169,51 +169,7 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     elif [[ $x -eq 12 ]]; then
        del-user
     elif [[ $x -eq 13 ]]; then
-       renew-xray
-    elif [[ $x -eq 14 ]]; then
-       add-host
-    elif [[ $x -eq 15 ]]; then
-       crtv2ray
-    elif [[ $x -eq 16 ]]; then
-       bckp
-    elif [[ $x -eq 17 ]]; then
-       restore
-     elif [[ $x -eq 18 ]]; then
-       xolpanel
-    else
-       menu
-    fi
-else
-    if [[ $x -eq 69 ]]; then
-       wget -q -O /usr/bin/update-script "https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/dll/system/update-script.sh" && chmod +x /usr/bin/update-script
-       screen -S upds update-script
-       menu
-    elif [[ $x -eq 1 ]]; then
-       usernew
-    elif [[ $x -eq 2 ]]; then
-       sshws
-    elif [[ $x -eq 3 ]]; then
-       cek
-    elif [[ $x -eq 4 ]]; then
-       hapus
-    elif [[ $x -eq 5 ]]; then
-       renew
-    elif [[ $x -eq 6 ]]; then
-       member
-    elif [[ $x -eq 7 ]]; then
-       add-ws
-    elif [[ $x -eq 8 ]]; then
-       add-vless
-    elif [[ $x -eq 9 ]]; then
-       add-tr
-    elif [[ $x -eq 10 ]]; then
-       add-ssws
-    elif [[ $x -eq 11 ]]; then
-       cek-user
-    elif [[ $x -eq 12 ]]; then
-       del-user
-    elif [[ $x -eq 13 ]]; then
-       renew-xray
+       del-ssws
     elif [[ $x -eq 13 ]]; then
        renew-xray
     elif [[ $x -eq 14 ]]; then
@@ -229,4 +185,3 @@ else
     else
        menu
     fi
-fi
