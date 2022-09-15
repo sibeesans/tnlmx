@@ -106,14 +106,11 @@ echo -e "\e[36m╘════════════════════�
  [\033[1;36m11\033[0m]  Cek User Xray
  [\033[1;36m12\033[0m]  Del User Xray Vmess
  [\033[1;36m13\033[0m]  Del User Xray Ssws
- [\033[1;36m14\033[0m]  Renew User Xray"
 echo -e  "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;41;36m               Settings MENU                \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m
- [\033[1;36m15\033[0m]  Add-host
- [\033[1;36m16\033[0m]  Gen SSL 
- [\033[1;36m17\033[0m]  Backup 
- [\033[1;36m18\033[0m]  Restore
+ [\033[1;36m14\033[0m]  Add-host
+ [\033[1;36m15\033[0m]  Gen Cert
 "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
@@ -171,16 +168,10 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
        del-user
     elif [[ $x -eq 13 ]]; then
        del-ssws
-    elif [[ $x -eq 14 ]]; then
-       renew-xray
-    elif [[ $x -6q 15 ]]; then
+    elif [[ $x -6q 14 ]]; then
        add-host
-    elif [[ $x -eq 16 ]]; then
+    elif [[ $x -eq 15 ]]; then
        crtv2ray
-    elif [[ $x -eq 17 ]]; then
-       bckp
-    elif [[ $x -eq 18 ]]; then
-       restore
     else
        menu
     fi
