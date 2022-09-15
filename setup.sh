@@ -234,7 +234,6 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-#wget https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
