@@ -89,8 +89,7 @@ echo -e "IP-VPS          :  $IPVPS"
 echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;41;36m                 SSH MENU                   \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
-echo -e "
- [\033[1;36m01\033[0m]  Add User SSH
+echo -e " [\033[1;36m01\033[0m]  Add User SSH
  [\033[1;36m02\033[0m]  SSH WS Enable
  [\033[1;36m03\033[0m]  Cek User SSH
  [\033[1;36m04\033[0m]  Del User SSH
@@ -104,13 +103,13 @@ echo -e "\e[36m╘════════════════════�
  [\033[1;36m09\033[0m]  Addd Trojan Account
  [\033[1;36m10\033[0m]  Add Sodosok Account
  [\033[1;36m11\033[0m]  Cek User Xray
- [\033[1;36m12\033[0m]  Del User Xray Vmess
- [\033[1;36m13\033[0m]  Del User Xray Ssws
+ [\033[1;36m12\033[0m]  Del User Xray
+ [\033[1;36m13\033[0m]  Del user Xray Ssws"
 echo -e  "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;41;36m               Settings MENU                \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m
  [\033[1;36m14\033[0m]  Add-host
- [\033[1;36m15\033[0m]  Gen Cert
+ [\033[1;36m15\033[0m]  Gen SSL 
 "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
@@ -135,7 +134,7 @@ echo -e "\e[36m╒════════════════════�
 echo ""
 echo -e "[ \033[0;31mChangelog\033[0m ]"
 curl -sS https://raw.githubusercontent.com/bokir-tampan/biji/main/clgshow
-echo -e
+echo -e "
 "
 fi
 echo -e "\e[36m╘═════════════════════════════════════════════╛\033[0m"
@@ -143,6 +142,44 @@ echo
 echo -ne "Select menu : "; read x
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     if [[ $x -eq 1 ]]; then
+       usernew
+    elif [[ $x -eq 2 ]]; then
+       sshws
+    elif [[ $x -eq 3 ]]; then
+       cek
+    elif [[ $x -eq 4 ]]; then
+       hapus
+    elif [[ $x -eq 5 ]]; then
+       renew
+    elif [[ $x -eq 6 ]]; then
+       member
+    elif [[ $x -eq 7 ]]; then
+       add-ws
+    elif [[ $x -eq 8 ]]; then
+       add-vless
+    elif [[ $x -eq 9 ]]; then
+       add-tr
+    elif [[ $x -eq 10 ]]; then
+       add-ssws
+    elif [[ $x -eq 11 ]]; then
+       cek-user
+    elif [[ $x -eq 12 ]]; then
+       del-user
+    elif [[ $x -eq 13 ]]; then
+       del-ssws
+    elif [[ $x -eq 14 ]]; then
+       add-host
+    elif [[ $x -eq 15 ]]; then
+       crtv2ray
+    else
+       menu
+    fi
+else
+    if [[ $x -eq 69 ]]; then
+       wget -q -O /usr/bin/update-script "https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/dll/system/update-script.sh" && chmod +x /usr/bin/update-script
+       screen -S upds update-script
+       menu
+    elif [[ $x -eq 1 ]]; then
        usernew
     elif [[ $x -eq 2 ]]; then
        sshws
