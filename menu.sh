@@ -135,7 +135,7 @@ echo -e "\e[36m╒════════════════════�
 echo ""
 echo -e "[ \033[0;31mChangelog\033[0m ]"
 curl -sS https://raw.githubusercontent.com/bokir-tampan/biji/main/clgshow
-echo -e "
+echo -e
 "
 fi
 echo -e "\e[36m╘═════════════════════════════════════════════╛\033[0m"
@@ -168,9 +168,11 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
        del-user
     elif [[ $x -eq 13 ]]; then
        del-ssws
-    elif [[ $x -6q 14 ]]; then
-       add-host
+    elif [[ $x -eq 14 ]]; then
+       renew-xray
     elif [[ $x -eq 15 ]]; then
+       add-host
+    elif [[ $x -eq 16 ]]; then
        crtv2ray
     else
        menu
