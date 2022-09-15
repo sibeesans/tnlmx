@@ -89,7 +89,8 @@ echo -e "IP-VPS          :  $IPVPS"
 echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;41;36m                 SSH MENU                   \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
-echo -e " [\033[1;36m01\033[0m]  Add User SSH
+echo -e "
+ [\033[1;36m01\033[0m]  Add User SSH
  [\033[1;36m02\033[0m]  SSH WS Enable
  [\033[1;36m03\033[0m]  Cek User SSH
  [\033[1;36m04\033[0m]  Del User SSH
@@ -170,18 +171,16 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
        del-user
     elif [[ $x -eq 13 ]]; then
        del-ssws
-    elif [[ $x -eq 13 ]]; then
-       renew-xray
     elif [[ $x -eq 14 ]]; then
+       renew-xray
+    elif [[ $x -6q 15 ]]; then
        add-host
-    elif [[ $x -eq 15 ]]; then
-       crtv2ray
     elif [[ $x -eq 16 ]]; then
-       bckp
+       crtv2ray
     elif [[ $x -eq 17 ]]; then
+       bckp
+    elif [[ $x -eq 18 ]]; then
        restore
-     elif [[ $x -eq 18 ]]; then
-       xolpanel
     else
        menu
     fi
