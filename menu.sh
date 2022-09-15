@@ -169,10 +169,8 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     elif [[ $x -eq 13 ]]; then
        del-ssws
     elif [[ $x -eq 14 ]]; then
-       renew-xray
-    elif [[ $x -eq 15 ]]; then
        add-host
-    elif [[ $x -eq 16 ]]; then
+    elif [[ $x -eq 15 ]]; then
        crtv2ray
     else
        menu
