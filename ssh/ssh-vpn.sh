@@ -287,6 +287,7 @@ wget -O xp "https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/ssh/xp.s
 wget -O asu "https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/asu.sh"
 wget -O menu "https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/menu.sh"
 wget -O sshws "https://raw.githubusercontent.com/sibeesans/tuunnel-mx/main/ssh/sshws.sh"
+wget -O speedtest "https://raw.githubusercontent.com/sibeesans/ajsc/main/ssh/speedtest_cli.py"
 chmod +x usernew
 chmod +x menu
 chmod +x hapus
