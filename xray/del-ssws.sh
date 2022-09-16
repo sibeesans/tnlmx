@@ -1,10 +1,7 @@
 #!/bin/bash
-# ==========================================
-
-MYIP=$(curl -sS ipv4.icanhazip.com)
-
-
-
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#### " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
